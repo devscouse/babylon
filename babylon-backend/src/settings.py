@@ -17,3 +17,6 @@ try:
     settings = Settings(_env_file=".env") # type: ignore
 except Exception as ex:
     logger.error(f"Exception loading environment variables: {ex}", exc_info=True)
+    exit()
+
+__all__ = ["settings"]
